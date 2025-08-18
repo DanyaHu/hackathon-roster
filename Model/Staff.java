@@ -2,7 +2,7 @@ package Model;
 import java.util.List;
 import java.util.Random;
 public class Staff {
-    private int id;
+    private final int staffId;
     private String name;
     private List<String> skills;
     private int maxHoursPerWeek;
@@ -10,7 +10,7 @@ public class Staff {
 
     //constructor
     public Staff(String name, List<String> skills, int maxHoursPerWeek, String employeeType){
-        this.id = generatedRandomId();
+        this.staffId = generatedRandomId();
         this.name = name;
         this.skills = skills;
         this.maxHoursPerWeek = maxHoursPerWeek;
@@ -27,7 +27,7 @@ public class Staff {
 
     //Getter
     public int getid(){
-        return id;
+        return staffId;
     }
 
     public String getname(){
@@ -61,7 +61,7 @@ public class Staff {
 
     @Override
     public String toString(){
-        return "Staff ID: " + id + "\n"
+        return "Staff ID: " + staffId + "\n"
             + "Name: " + name + "\n"
             + "Skills: " + skills + "\n"
             + "Max Hour/Week: " + maxHoursPerWeek + "\n"
